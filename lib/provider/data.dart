@@ -1,7 +1,6 @@
 import 'dart:convert';
-
-import 'package:flutter/material.dart';
 import 'data_covid.dart';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class Data with ChangeNotifier {

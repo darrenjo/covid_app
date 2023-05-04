@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../provider/data.dart';
 import 'package:provider/provider.dart';
-
 import '../widget/provinsi_item.dart';
+import '../provider/data.dart';
 
 class ProvinsiScreen extends StatelessWidget {
   const ProvinsiScreen({super.key});

@@ -5,5 +5,11 @@ class DataCovid {
   String? phone;
   String? address;
 
-  DataCovid({this.id, this.name, this.email, this.phone, this.address});
+  DataCovid({
+    this.id,
+    this.name,
+    this.email,
+    this.phone,
+    this.address,
+  });
 }

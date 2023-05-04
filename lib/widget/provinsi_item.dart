@@ -1,3 +1,4 @@
+import 'package:covid_app/screen/detail_provinsi.dart';
 import 'package:flutter/material.dart';
 import '../provider/data_covid.dart';
 
@@ -8,34 +9,47 @@ class ProvinsiItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.amber,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: Colors.black12),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            dataProvinsi.name!,
-            style: const TextStyle(fontWeight: FontWeight.bold),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailProvinsi(provinsi: dataProvinsi),
           ),
-          const SizedBox(
-            height: 5,
-          ),
-          Text(
-            dataProvinsi.phone!,
-            style: const TextStyle(fontWeight: FontWeight.normal),
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Text(dataProvinsi.email!,
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: Colors.amber,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: Colors.black12),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              dataProvinsi.name!,
               style: const TextStyle(
-                  fontWeight: FontWeight.bold, color: Colors.red))
-        ],
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Text(
+              dataProvinsi.phone!,
+              style: const TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 15,
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+          ],
+        ),
       ),
     );
   }
