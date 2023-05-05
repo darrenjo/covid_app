@@ -8,20 +8,10 @@ class Data with ChangeNotifier {
 
   Future<void> fetchData() async {
     //INI OK
-    //String url = "https://jsonplaceholder.typicode.com/users";
-
-    //INI OK
-    //String url = "https://aplysit.com/00_FLUTTER/datasetjson.json";
-
-    //INI OK
-    //String url = "https://aplysit.com/00_FLUTTER/118009/datasetjson.json";
-
-    //INI OK
     String url = "https://aplysit.com/00_FLUTTER/1320003/user.php";
 
-    //INI CHALLANGE
-    //String url = "https://aplysit.com/00_FLUTTER/118009/userdetail.php";
-    //Bagaimana cara kirim POST parameter? Nanti ya....
+    // POST via POSTMAN
+    //String url = "https://aplysit.com/00_FLUTTER/1320003/user_post.php";
 
     var response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
